@@ -48,7 +48,7 @@ social-network-links:
 # youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
-  linkedin: azzolliniilario
+# linkedin: azzolliniilario
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -61,6 +61,7 @@ social-network-links:
 #  telegram: yourname
 #  calendly: yourname
 #  mastodon: instance.url/@username
+#  ORCID: your ORCID ID
    google-scholar: citations?user=Aoaxl1YAAAAJ
 #  discord: invite/invite_code or users/userid 
 
@@ -72,8 +73,8 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: false
-  facebook: false
+  twitter: true
+  facebook: true
   linkedin: true
   vk: false
 
