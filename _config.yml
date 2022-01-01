@@ -42,13 +42,13 @@ social-network-links:
   email: "ilario.azzollini92@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 # facebook: deanattali
-  github: "https://github.com/ilarioazzollini"
+  github: ilarioazzollini
 # twitter: daattali
 # patreon: DeanAttali
 # youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
-  linkedin: "https://www.linkedin.com/in/azzolliniilario/"
+  linkedin: azzolliniilario
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -61,8 +61,8 @@ social-network-links:
 #  telegram: yourname
 #  calendly: yourname
 #  mastodon: instance.url/@username
-   ORCID: "https://orcid.org/my-orcid?orcid=0000-0003-3618-166X"
-   google-scholar: "https://scholar.google.com/citations?user=Aoaxl1YAAAAJ&hl=en"
+   ORCID: 0000-0003-3618-166X
+   google-scholar: citations?user=Aoaxl1YAAAAJ
 #  discord: invite/invite_code or users/userid 
 
 # If you want your website to generate an RSS feed, provide a description
