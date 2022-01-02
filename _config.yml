@@ -105,11 +105,11 @@ navbar-text-col: "#FFFFFF"
 navbar-border-col: "#DDDDDD"
 page-col: "#FAFAFA"
 text-col: "#00629B"
-link-col: "#008AFF"
+link-col: "#44AF69"
 hover-col: "#0085A1"
 footer-col: "#00629B"
 footer-text-col: "#FFFFFF"
-footer-link-col: "#404040"
+footer-link-col: "#44AF69"
 footer-hover-col: "#0085A1"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
@@ -211,7 +211,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Europe/Rome"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
