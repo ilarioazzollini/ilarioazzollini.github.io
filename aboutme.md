@@ -2,6 +2,7 @@
 layout: page
 title: About me
 #subtitle: Why you'd want to go on a date with me
+cover-img: /blog/img/path.jpg
 ---
 
 Hi! My name is Ilario Antonio Azzollini and since November 2021 I am working as an _R&D Automation & Robotics Software Engineer_ at the [SACMI Innovation Lab](https://www.sacmi.it/en-us/Corporate/Innovation/Sacmi-Innovation-Lab). In particular, I work in the automation and simulation software team. In line with my background studies, I mainly work on the development and testing of novel control algorithms. 
