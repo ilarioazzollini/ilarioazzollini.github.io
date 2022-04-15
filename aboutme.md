@@ -23,4 +23,4 @@ After that, I moved to the [Delft Center for Systems and Control (DCSC)](https:/
 
 Then, I came back to Bologna for my PhD studies in Automatica, that is part of the [IBES](https://phd.unibo.it/ibes/en/phd-programme) programme. I have been accepted to the final defence that should grant me the title at the end of June 2022.
 
-I got married in September 2021, while in November 2021 I left academia and started working as an _R&D Automation & Robotics Software Engineer_ at [SACMI](https://www.sacmi.it/en-us/).
+I got married in September 2021, while in November 2021 I started working as an _R&D Automation & Robotics Software Engineer_ at [SACMI](https://www.sacmi.it/en-us/).
