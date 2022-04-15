@@ -17,8 +17,7 @@ navbar-links:
   <i class="fa fa-user" aria-hidden="true"></i> About Me: "aboutme"
   <i class="fa fa-rss" aria-hidden="true"></i> Blog: "blog"
   <i class="fa fa-rocket" aria-hidden="true"></i> Projects:
-    - "project-1"
-    - "project-2"
+    - "projects/_posts/project1"
   <i class="fas fa-atom" aria-hidden="true"></i> Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
