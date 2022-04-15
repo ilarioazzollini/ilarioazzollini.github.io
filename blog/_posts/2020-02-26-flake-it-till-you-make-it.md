@@ -2,6 +2,8 @@
 layout: post
 title: Flake it till you make it
 subtitle: Excerpt from Soulshaping by Jeff Brown
+gh-repo: ilarioazzollini/autonomous-unicycle
+gh-badge: [star, fork, follow]
 cover-img: /blog/img/path.jpg
 thumbnail-img: /blog/img/thumb.png
 share-img: /blog/img/path.jpg
