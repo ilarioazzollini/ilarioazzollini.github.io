@@ -1,8 +1,5 @@
 ---
-layout: page
+layout: minimal
 title: Projects
 ---
 
-### Title
-
-TBD...
