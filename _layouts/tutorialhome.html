@@ -46,7 +46,7 @@ layout: page
 
     <p class="tutorial-meta">
       {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-      tutorialed on {{ tutorial.date | date: date_format }}
+      posted on {{ tutorial.date | date: date_format }}
     </p>
 
     {% if thumbnail != "" %}
@@ -77,7 +77,7 @@ layout: page
     {% endunless %}
 
     {% if site.feed_show_tags != false and tutorial.tags.size > 0 %}
-    <div class="blog-tags">
+    <div class="something-tutorials-tags">
       <span>Tags:</span>
       {% for tag in tutorial.tags %}
       <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
