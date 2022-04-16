@@ -19,6 +19,7 @@ navbar-links:
   <i class="fa fa-rocket" aria-hidden="true"></i> Projects:
     - Learning C++: "projects-learning-cpp"
     - Autonomous Unicycle: "projects-autonomous-unicycle"
+    - Something Tutorials: "something-tutorials"
   <i class="fas fa-atom" aria-hidden="true"></i> Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
