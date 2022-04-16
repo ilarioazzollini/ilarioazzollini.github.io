@@ -7,7 +7,7 @@ layout: page
 {% assign posts = paginator.posts | default: site.tutorials %}
 
 <div class="posts-list">
-  {% for post in tutorials %}
+  {% for post in posts %}
   <article class="post-preview">
 
     {%- capture thumbnail -%}
