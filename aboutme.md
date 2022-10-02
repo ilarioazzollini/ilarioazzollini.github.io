@@ -5,7 +5,7 @@ title: About me
 cover-img: /blog/img/path.jpg
 ---
 
-Hi! My name is Ilario Antonio Azzollini and since November 2021 I am working as an _R&D Automation & Robotics Software Engineer_ at the [SACMI Innovation Lab](https://www.sacmi.it/en-us/Corporate/Innovation/Sacmi-Innovation-Lab). In particular, I work in the automation and simulation software team. In line with my background studies, I mainly work on the development and testing of novel control algorithms. 
+Hi! My name is Ilario Antonio Azzollini and since November 2021 I am working as a _R&D Software Engineer_ at the [SACMI Innovation Lab](https://www.sacmi.it/en-us/Corporate/Innovation/Sacmi-Innovation-Lab). In particular, I work in the automation and simulation software team. In line with my background studies, I mainly work on the development and testing of novel control algorithms. 
 
 My work can be usually decomposed in the following subtasks:
 * mathematical system modeling (if not provided/already developed)
@@ -22,6 +22,8 @@ I hold a BSc in [Automation Engineering](https://corsi.unibo.it/1cycle/Automatio
 
 After that, I moved to the [Delft Center for Systems and Control (DCSC)](https://www.tudelft.nl/3me/over/afdelingen/delft-center-for-systems-and-control) for my MSc in [Systems and Control](https://www.tudelft.nl/onderwijs/opleidingen/masters/systems-control/msc-systems-control).
 
-Then, I came back to Bologna for my PhD studies in Automatica, that is part of the [IBES](https://phd.unibo.it/ibes/en/phd-programme) programme. I have been accepted to the final defence that should grant me the title at the end of June 2022.
+Then, I came back to Bologna for my PhD studies in Control Systems Engineering, that is part of the [IBES](https://phd.unibo.it/ibes/en/phd-programme) programme. I received the degree in June 2022.
 
-I got married in September 2021, while in November 2021 I started working as an _R&D Automation & Robotics Software Engineer_ at [SACMI](https://www.sacmi.it/en-us/).
+I got married in September 2021, while in November 2021 I started working as a _R&D Software Engineer_ at [SACMI](https://www.sacmi.it/en-us/).
+
+Test this [blog post](https://ilarioazzollini.github.io/2020-02-28-test-markdown/). Or in another way [blog post](/blog/_posts/2020-02-26-flake-it-till-you-make-it.md). And check a link to [projects](/projects-autonomous-unicycle.md).
