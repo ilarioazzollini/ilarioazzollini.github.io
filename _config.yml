@@ -15,10 +15,11 @@ author: Ilario A. Azzollini
 
 navbar-links:
   <i class="fa fa-user" aria-hidden="true"></i> About Me: "aboutme"
+  <i class="fa fa-book" aria-hidden="true"></i> About Me: "scientific-cv"
   <i class="fa fa-rss" aria-hidden="true"></i> Blog: "blog"
   <i class="fa fa-rocket" aria-hidden="true"></i> Projects:
-    - Learning C++: "projects-learning-cpp"
-    - Autonomous Unicycle: "projects-autonomous-unicycle"
+    - <i class="fa fa-code" aria-hidden="true"></i> Learning C++: "projects-learning-cpp"
+    - <i class="fa fa-cogs" aria-hidden="true"></i> Autonomous Unicycle: "projects-autonomous-unicycle"
   <i class="fas fa-atom" aria-hidden="true"></i> Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
