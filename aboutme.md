@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-#subtitle: Why you'd want to go on a date with me
+subtitle: My story
 #cover-img: /blog/img/path.jpg
 ---
 
