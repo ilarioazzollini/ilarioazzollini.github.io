@@ -9,6 +9,16 @@ subtitle: My academic career and research highlights
 - [1 - Education](#1---education)
     - [1.1 - PhD in Control Systems Engineering](#11---phd-in-control-systems-engineering)
     - [1.2 - MSc in Systems and Control](#12---msc-in-systems-and-control)
+    - [1.3 - BSc in Automation Engineering](#13---bsc-in-automation-engineering)
+- [2 - Publications](#2---publications)
+    - [2.1 - Journals](#21---journals)
+    - [2.2 - Conferences](#22---conferences)
+- [3 - Teaching Activities](#3---teaching-activities)
+    - [3.1 - University Courses](#31---university-courses)
+    - [3.2 - Supervision](#32---supervision)
+- [4 - External Invited Activities](#4---external-invited-activities)
+- [5 - PhD Courses](#5---phd-courses)
+- [6 - Awards](#6---awards)
 
 # 1 - Education
 
@@ -27,3 +37,45 @@ subtitle: My academic career and research highlights
 - _Main topics_: Control Theory, Optimization, Filtering and Identification, Digital Control, Robust and Multivariable
 Control, Nonlinear Control, Adaptive and Predictive Control, Networked and Distributed Control. For all
 these courses, several projects were successfully developed in Matlab/Simulink.
+
+## 1.3 - BSc in Automation Engineering
+#### _University of Bologna (Italy), Sep 2012 -- Jul 2016_
+#### _Grade: 106/110_
+
+tbd...
+
+# 2 - Publications
+
+tbd...
+
+## 2.1 - Journals
+
+tbd...
+
+## 2.2 - Conferences
+
+tbd...
+
+# 3 - Teaching Activities
+
+tbd...
+
+## 3.1 - University Courses
+
+tbd...
+
+## 3.2 - Supervision
+
+tbd...
+
+# 4 - External Invited Activities
+
+tbd...
+
+# 5 - PhD Courses
+
+tbd...
+
+# 6 - Awards
+
+tbd...
