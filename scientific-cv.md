@@ -52,7 +52,13 @@ tbd...
 
 ## 2.1 - Journals
 
-tbd...
+#### - [J3] S. Baldi, I. A. Azzollini, P. Ioannou, "A distributed indirect adaptive approach to cooperative tracking in networks of uncertain single-input single-output systems", _IEEE Transactions on Automatic Control_, 2020
+
+#### - [J2] I. A. Azzollini, W. Yu, S. Yuan, S. Baldi, "Adaptive Leader–Follower Synchronization Over Heterogeneous and Uncertain Networks of Linear Systems Without Distributed Observer", _IEEE Transactions on Automatic Control_, 2020
+
+#### - [J1] I. A. Azzollini, V. Di Felice, F. Fraboni, L. Cavallucci, M. Breschi, A. Dalla Rosa, G. Zini, "Lead-Acid Battery Modeling Over Full State of Charge and Discharge Range", _IEEE Transactions on Power Systems_, 2018
+
+Test link to [J3](#j3-s-baldi-i-a-azzollini-p-ioannou-a-distributed-indirect-adaptive-approach-to-cooperative-tracking-in-networks-of-uncertain-single-input-single-output-systems-ieee-transactions-on-automatic-control-2020)
 
 ## 2.2 - Conferences
 
