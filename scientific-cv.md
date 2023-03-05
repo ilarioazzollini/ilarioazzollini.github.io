@@ -26,12 +26,12 @@ subtitle: My academic career and research highlights
 #### _University of Bologna (Italy), Nov 2018 -- Oct 2021_
 
 - PhD Program in Biomedical, Electrical and System Engineering ([link](https://phd.unibo.it/ibes/en))
-- _Thesis_: "Robust Adaptive Control with Applications to Multi-Agent Systems and Mobile Robotics" ([link](http://amsdottorato.unibo.it/10244/))
+- _Thesis_: "Robust Adaptive Control with Applications to Multi-Agent Systems and Mobile Robotics" ([thesis link](http://amsdottorato.unibo.it/10244/), [presentation link](https://www.dropbox.com/s/nzxerce4gbonlc0/PhD_final_presentation.pdf?dl=0))
 - _Main topics_: Nonlinear and Adaptive Control, Distributed Control Systems, Hybrid Systems, Output Regulation, Nonlinear Optimization, Input-to-State-Stability, Robust Least-Squares Estimation, Robust Estimation and Control for Mobile Robotics applications (Quadcopters for Search & Rescue applications, and Rovers for agricultural applications)
 - _Awarded_ with the Marco Polo Program Scholarship: economic support to promote research periods abroad for young researchers working at the department
 - _Visiting PhD Student_ at Imperial College London's [Control and Power Research Group](https://www.imperial.ac.uk/electrical-engineering/research/control-and-power/) from March 2021 to August 2021 (fully remote unfortunately). I worked on adaptive stabilization and control of nonminimum-phase systems, uniform complete observability, (extended) high-gain observers and their applications to nonlinear stabilization problems.
-- _Contributor for the European Project AirBorne_ (AerIal RoBotic technologies for professiOnal seaRch aNd rescuE) as a systems and control research engineer. My contribution consisted in the development of control algorithms able to drive the ARVA-equipped drone(s) as close as possible to the victim(s), in a robust way ([link](https://www.airborne-project.eu/)).
-- At the end of my PhD career (November 2021), I had a 5 h-index on google scholar with 53 total citations, with 3 journal papers and 8 conference papers already published (some other were still under review at the time).
+- _Contributor for the European Project AirBorne_ (AerIal RoBotic technologies for professiOnal seaRch aNd rescuE): contributed to the development of control algorithms able to drive the ARVA-equipped drone(s) as close as possible to the victim(s), in a robust way ([link](https://www.airborne-project.eu/)).
+- At the end of my PhD career (November 1, 2021), I had a 5 h-index on google scholar with 53 total citations, with 3 journal papers and 8 conference papers already published (some other were still under review at the time).
 
 ## 1.2 - MSc in Systems and Control
 #### _TU Delft (The Netherlands), Sep 2016 -- Oct 2018_
@@ -48,21 +48,31 @@ tbd...
 
 # 2 - Publications
 
-tbd...
-
 ## 2.1 - Journals
 
-#### - [J3] S. Baldi, I. A. Azzollini, P. Ioannou, "A distributed indirect adaptive approach to cooperative tracking in networks of uncertain single-input single-output systems", _IEEE Transactions on Automatic Control_, 2020
+- [J3] S. Baldi, __I. A. Azzollini__, P. Ioannou, "A distributed indirect adaptive approach to cooperative tracking in networks of uncertain single-input single-output systems", _IEEE Transactions on Automatic Control_, 2020
 
-#### - [J2] I. A. Azzollini, W. Yu, S. Yuan, S. Baldi, "Adaptive Leader–Follower Synchronization Over Heterogeneous and Uncertain Networks of Linear Systems Without Distributed Observer", _IEEE Transactions on Automatic Control_, 2020
+- [J2] __I. A. Azzollini__, W. Yu, S. Yuan, S. Baldi, "Adaptive Leader–Follower Synchronization Over Heterogeneous and Uncertain Networks of Linear Systems Without Distributed Observer", _IEEE Transactions on Automatic Control_, 2020
 
-#### - [J1] I. A. Azzollini, V. Di Felice, F. Fraboni, L. Cavallucci, M. Breschi, A. Dalla Rosa, G. Zini, "Lead-Acid Battery Modeling Over Full State of Charge and Discharge Range", _IEEE Transactions on Power Systems_, 2018
-
-Test link to [J3](#j3-s-baldi-i-a-azzollini-p-ioannou-a-distributed-indirect-adaptive-approach-to-cooperative-tracking-in-networks-of-uncertain-single-input-single-output-systems-ieee-transactions-on-automatic-control-2020)
+- [J1] __I. A. Azzollini__, V. Di Felice, F. Fraboni, L. Cavallucci, M. Breschi, A. Dalla Rosa, G. Zini, "Lead-Acid Battery Modeling Over Full State of Charge and Discharge Range", _IEEE Transactions on Power Systems_, 2018
 
 ## 2.2 - Conferences
 
-tbd...
+- [C8] __I. A. Azzollini__, "Title", _Conference_, year
+
+- [C7] __I. A. Azzollini__, "Title", _Conference_, year
+
+- [C6] __I. A. Azzollini__, "Title", _Conference_, year
+
+- [C5] __I. A. Azzollini__, "Title", _Conference_, year
+
+- [C4] __I. A. Azzollini__, "Title", _Conference_, year
+
+- [C3] __I. A. Azzollini__, "Title", _Conference_, year
+
+- [C2] __I. A. Azzollini__, "Title", _Conference_, year
+
+- [C1] __I. A. Azzollini__, S. Baldi, E. Kosmatopoulos, "Adaptive synchronization in networks with heterogeneous uncertain Kuramoto-like units", in _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018.
 
 # 3 - Teaching Activities
 
