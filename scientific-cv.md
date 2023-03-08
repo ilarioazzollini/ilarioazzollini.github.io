@@ -54,29 +54,29 @@ subtitle: My academic career and research highlights
 
 ## 2.1 - Journals
 
-- [J3] S. Baldi, __I. A. Azzollini__, P. Ioannou, "A distributed indirect adaptive approach to cooperative tracking in networks of uncertain single-input single-output systems", _IEEE Transactions on Automatic Control_, 2020
+- [J3] S. Baldi, __I. A. Azzollini__, P. Ioannou, "A distributed indirect adaptive approach to cooperative tracking in networks of uncertain single-input single-output systems", _IEEE Transactions on Automatic Control_, 2020 ([paper link](https://ieeexplore.ieee.org/document/9261939)).
 
-- [J2] __I. A. Azzollini__, W. Yu, S. Yuan, S. Baldi, "Adaptive Leader–Follower Synchronization Over Heterogeneous and Uncertain Networks of Linear Systems Without Distributed Observer", _IEEE Transactions on Automatic Control_, 2020
+- [J2] __I. A. Azzollini__, W. Yu, S. Yuan, S. Baldi, "Adaptive Leader–Follower Synchronization Over Heterogeneous and Uncertain Networks of Linear Systems Without Distributed Observer", _IEEE Transactions on Automatic Control_, 2020 ([paper link](https://ieeexplore.ieee.org/document/9109696)).
 
-- [J1] __I. A. Azzollini__, V. Di Felice, F. Fraboni, L. Cavallucci, M. Breschi, A. Dalla Rosa, G. Zini, "Lead-Acid Battery Modeling Over Full State of Charge and Discharge Range", _IEEE Transactions on Power Systems_, 2018
+- [J1] __I. A. Azzollini__, V. Di Felice, F. Fraboni, L. Cavallucci, M. Breschi, A. Dalla Rosa, G. Zini, "Lead-Acid Battery Modeling Over Full State of Charge and Discharge Range", _IEEE Transactions on Power Systems_, 2018 ([paper link](https://ieeexplore.ieee.org/document/8400485)).
 
 ## 2.2 - Conferences
 
-- [C8] A. Bosso, __I. A. Azzollini__, S. Baldi, L. Zaccarian,, "“A Hybrid Distributed Strategy for Robust Global Phase Synchronization of Second-Order Kuramoto Oscillators", in _2021 Conference on Decision and Control (CDC)_, Austin, Texas, USA, December 13-17, 2021.
+- [C8] A. Bosso, __I. A. Azzollini__, S. Baldi, L. Zaccarian,, "A Hybrid Distributed Strategy for Robust Global Phase Synchronization of Second-Order Kuramoto Oscillators", in _2021 Conference on Decision and Control (CDC)_, Austin, Texas, USA, December 13-17, 2021 ([paper link](https://ieeexplore.ieee.org/document/9682996)).
 
-- [C7] __I. A. Azzollini__, M. Bin, P. Bernard, L. Marconi, "Robust Frequency Estimation of Multi-Harmonic Signals", in _2021 European Control Conference (ECC)_, Rotterdam, The Netherlands, June 29 - July 2, 2021.
+- [C7] __I. A. Azzollini__, M. Bin, P. Bernard, L. Marconi, "Robust Frequency Estimation of Multi-Harmonic Signals", in _2021 European Control Conference (ECC)_, Rotterdam, The Netherlands, June 29 - July 2, 2021 ([paper link](https://ieeexplore.ieee.org/document/9654931), [presentation link](https://www.dropbox.com/s/vs099jxtszebro7/ECC21_Frequencies.pdf?dl=0)).
 
-- [C6] R. Tazzari, __I. A. Azzollini__, L. Marconi,, "“An Adaptive Observer approach to Slip Estimation for Agricultural Tracked Vehicles", in _2021 European Control Conference (ECC)_, Rotterdam, The Netherlands, June 29 - July 2, 2021.
+- [C6] R. Tazzari, __I. A. Azzollini__, L. Marconi,, "An Adaptive Observer approach to Slip Estimation for Agricultural Tracked Vehicles", in _2021 European Control Conference (ECC)_, Rotterdam, The Netherlands, June 29 - July 2, 2021 ([paper link](https://ieeexplore.ieee.org/document/9654998), [presentation link](https://www.dropbox.com/s/midhaxgvtgc2k10/ECC_2021_Presentation.pdf?dl=0)).
 
-- [C5] __I. A. Azzollini__, N. Mimmo, L. Marconi, "“An Extremum Seeking Approach to Search and Rescue Operations in Avalanches using ARVA", in _2020 IFAC World Congress_, Berlin, Germany, July 12-17, 2020.
+- [C5] __I. A. Azzollini__, N. Mimmo, L. Marconi, "An Extremum Seeking Approach to Search and Rescue Operations in Avalanches using ARVA", in _2020 IFAC World Congress_, Berlin, Germany, July 12-17, 2020 ([paper link](https://www.sciencedirect.com/science/article/pii/S2405896320328706), [presentation link](https://www.dropbox.com/s/sizhsgw0wn4n4k8/ExtremumSeeking_ARVA_IFAC_WC_2020.pdf?dl=0)).
 
-- [C4] A. Bosso, __I. A. Azzollini__, A. Tilli, "Semi-global Hybrid Sensorless Observer for Permanent Magnets Synchronous Machines with Unknown Mechanical Model", in _2020 IFAC World Congress_, Berlin, Germany, July 12-17, 2020.
+- [C4] A. Bosso, __I. A. Azzollini__, A. Tilli, "Semi-global Hybrid Sensorless Observer for Permanent Magnets Synchronous Machines with Unknown Mechanical Model", in _2020 IFAC World Congress_, Berlin, Germany, July 12-17, 2020 ([paper link](https://www.sciencedirect.com/science/article/pii/S2405896320332547)).
 
-- [C3] A. Bosso, __I. A. Azzollini__, S. Baldi, "Global Frequency Synchronization Over Uncertain Networks of Second-Order Kuramoto Oscillators Via Distributed Adaptive Tracking", in _2019 Conference on Decision and Control (CDC)_, Nice, France, December 11-13, 2019.
+- [C3] A. Bosso, __I. A. Azzollini__, S. Baldi, "Global Frequency Synchronization Over Uncertain Networks of Second-Order Kuramoto Oscillators Via Distributed Adaptive Tracking", in _2019 Conference on Decision and Control (CDC)_, Nice, France, December 11-13, 2019 ([paper link](https://ieeexplore.ieee.org/document/9030006)).
 
-- [C2] S. Baldi, __I. A. Azzollini__, E. Kosmatopoulos,, "A distributed disagreement-based protocol for synchronization of uncertain heterogeneous agents", in _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018.
+- [C2] S. Baldi, __I. A. Azzollini__, E. Kosmatopoulos,, "A distributed disagreement-based protocol for synchronization of uncertain heterogeneous agents", in _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018 ([paper link](https://ieeexplore.ieee.org/document/8550572), [presentation link](https://www.dropbox.com/s/keui1m6h4xbg85y/ECC18_Paper_1.pdf?dl=0)).
 
-- [C1] __I. A. Azzollini__, S. Baldi, E. Kosmatopoulos, "Adaptive synchronization in networks with heterogeneous uncertain Kuramoto-like units", in _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018.
+- [C1] __I. A. Azzollini__, S. Baldi, E. Kosmatopoulos, "Adaptive synchronization in networks with heterogeneous uncertain Kuramoto-like units", in _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018 ([paper link](https://ieeexplore.ieee.org/document/8550539), [presentation link](https://www.dropbox.com/s/5efok23wz4tgksx/ECC18_Paper_2.pdf?dl=0)).
 
 # 3 - Teaching Activities
 
