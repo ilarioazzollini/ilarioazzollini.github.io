@@ -80,11 +80,28 @@ subtitle: My academic career and research highlights
 
 # 3 - Teaching Activities
 
-tbd...
+
 
 ## 3.1 - University Courses
 
-tbd...
+### Systems Theory and Advanced Control Systems
+#### University of Bologna, MSc in Automation Engineering, Oct 2018 - Sept 2020
+
+Teaching tutor for the course ([link](https://www.unibo.it/en/teaching/course-unit-catalogue/course-unit/2020/460427)) dealing with:
+- Dynamic systems representation
+- Stability of linear systems
+- Reachability and controllability
+- Observability and reconstructability
+- Robust and Adaptive Control
+- Matlab/Simulink exercise sessions
+
+### Adaptive and Predictive Control
+#### Delft University of Technology, MSc in Systems and Control, Jan 2018 - Apr 2018
+
+Graduate teaching assistant for the course (10h p/w):
+- lecturer on Model Reference Adaptive Control (3 lectures)
+- preparing and grading assignments (both written and Matlab assignments)
+- 2 Q&A hours per week with students
 
 ## 3.2 - Supervision
 
@@ -92,12 +109,47 @@ tbd...
 
 # 4 - External Invited Activities
 
-tbd...
+### Activity as a Reviewer
+
+- __Journals__: Elsevier Automatica; IEEE Transactions on Automatic Control (TAC); IEEE Transactions on Control Systems Technology (CST); IEEE Transactions on Control of Network Systems (TCNS); IEEE Control Systems Letters (L-CSS); International Journal of Adaptive Control and Signal Processing; IET Control Theory & Applications; Journal of Guidance, Control, and Dynamics; Optimal Control, Applications and Methods.
+- __Conferences__: Conference on Decision and Control (CDC); International Conference on Intelligent Robots and Systems (IROS); IFAC Symposium on Nonlinear Control Systems (NOLCOS); IFAC Symposium on Mechatronic Systems; American Control Conference (ACC); IFAC World Congress.
+
+### Activity as an Examiner
+
+#### Expert Member in Automation and Control Engineering
+
+I served as commission member for the Italian "state examination for the license to practice engineering", at University of Bologna, between June 2019 and and January 2020.
+
+### Organization of (or Support for) Scientific Meetings
+
+#### Co-Chair of the Adaptive Control Session @ ECC18
+
+Invited by the Program Chair, Prof. Thomas Parisini, at the _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018.
+
+
+### Invited Talks
+
+#### Workshop on Robust Control for Linear and Nonlinear Systems
+
+Talk Title: "Extremum Seeking: An Output Regulation Perspective", University of Bologna, September 10, 2019, Organizer: Prof. Lorenzo Marconi.
 
 # 5 - PhD Courses
 
-tbd...
+During my PhD, I took the following courses:
+- [6] __Nonlinear Control__: PhD course at University of Bologna, Italy, February 19 - June 5, 2020. Lecturer: Prof. Alberto Isidori.
+- [5] __Advanced Robotics__: IBES PhD course at University of Bologna, Italy, January 10-31, 2020. Lecturer: Prof. Gianluca Palli.
+- [4] __Model Reduction by Moment Matching for Linear and Nonlinear Systems__: SIDRA Summer School at CEUB, Bertinoro, Italy, July 14-20, 2019. Lecturer: Prof. Alessandro Astolfi.
+- [3] __Robust and Adaptive Output Regulation of Multivariable and Hybrid Systems__: EECI Course 2019 at ETH, Zurich, Switzerland, May 6-10, 2019. Lecturers: Prof. Alberto Isidori and
+Prof. Lorenzo Marconi.
+- [2] __Nonlinear observers: Applications to Aerial Robotic Systems__: EECI Course 2019 at IIT, Genova, Italy, April 8-12, 2019. Lecturers: Prof. Robert Mahony, Prof. Tarek
+Hamel and Prof. Jochen Trumpf.
+- [1] __Adaptive Control__: SIDRA Summer School at CEUB, Bertinoro, Italy, July 9-14, 2018. Lecturer: Prof. Andrea Serrani.
 
 # 6 - Awards
 
-tbd...
+- [3] __Marco Polo Program scholarship__: Economic support to promote research periods abroad for young
+researchers working at the DEI (Unibo).
+- [2] __AlmaTong scholarship__: Winner of one of the ten (10) AlmaTong scholarships during the first bachelor year, because of high level performance in university career. It entailed cover to Shanghai’s Tongji University stay expenses (for one year), Bologna-Shanghai round trip flight ticket and medical insurance.
+- [1] __EUCA Student Travel Grant 2018__: The EUCA Student Travel Support Program was meant to
+enable ten (10) high performing students to attend the European Control Conference 2018 (12-15
+June 2018, Limassol, Cyprus), present their paper(s) and become more integrated into the scientific community.
