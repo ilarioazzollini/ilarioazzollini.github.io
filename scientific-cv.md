@@ -105,7 +105,18 @@ Graduate teaching assistant for the course (10h p/w):
 
 ## 3.2 - Supervision
 
-tbd...
+- [11] Co-supervisor for the BSc thesis _"Optimal Position Control of a Quadcopter: Implementation and Testing by Expanding the PX4 Flight Stack"_, April 2021 – October 2021, main supervisor: Prof. Lorenzo Marconi, other co-supervisor: Mr. Lorenzo Gentilini.
+- [10] Co-supervisor for the BSc thesis _"Feedback Linearization-based Position Control of a Unicycle: Implementation and Testing in ROS/Gazebo"_, March 2021 – October 2021, main supervisor: Prof. Lorenzo Marconi, other co-supervisor: Mr. Lorenzo Gentilini.
+- [9] Co-supervisor for the BSc thesis _"Stabilization of an Inverted Pendulum on a Cart: Implementation and Testing on a real setup using Arduino"_, November 2020 – July 2021, main supervisor: Prof. Lorenzo Marconi, other co-supervisor: Mr. Simone Rossi.
+- [8] Co-supervisor for the BSc thesis _"Lyapunov-based Synchronization Strategies for Multi-Agent Linear Systems"_, November 2020 – July 2021, main supervisor: Prof. Lorenzo Marconi, other co-supervisor: Dr. Alessandro Bosso.
+- [7] Co-supervisor for the MSc thesis _"Output Regulation and Adaptive Control of Uncertain Linear Systems: an Overview and an Adaptive Passification Approach"_, May 2020 – December 2020, main supervisors: Prof. Lorenzo Marconi and Prof. Carlo Novara, other co-supervisor: Dr. Alessandro Bosso.
+- [6] Co-supervisor for the BSc thesis _"Discrete-Time Linearization-Based Optimal Control Design for Quadcopters:
+Implementation and Testing using ROS"_, November 2019 – October 2020, main supervisor: Prof. Lorenzo Marconi, other co-supervisors: Mr. Roberto Tazzari and Mr. Lorenzo Gentilini.
+- [5] Co-supervisor for the BSc thesis _"Modeling and Linearization-Based Optimal Control Design for UAVs"_, October 2019 – October 2020, main supervisor: Prof. Lorenzo Marconi, other co-supervisor: Mr. Lorenzo Gentilini.
+- [4] Co-supervisor for the BSc thesis _"ROS-based Real-Time Mapping using OctoMap: Implementation and Testing on an Agricultural UGV"_, October 2019 – March 2020, main supervisor: Prof. Lorenzo Marconi, other co-supervisors: Mr. Lorenzo Gentilini and Mr. Dario Mengoli.
+- [3] Co-supervisor for the BSc thesis _"An Extremum Seeking Approach to S&R Operations in Avalanches"_, April 2019 – October 2019, main supervisor: Prof. Lorenzo Marconi.
+- [2] Co-supervisor for the BSc thesis _"Consensus Control for Vehicular Platooning"_, April 2019 – October 2019, main supervisor: Prof. Lorenzo Marconi.
+- [1] Co-supervisor for the BSc thesis _"Synchronization over Homogeneous Multi-Agent Systems"_, January 2019 – March 2019, main supervisor: Prof. Lorenzo Marconi.
 
 # 4 - External Invited Activities
 
