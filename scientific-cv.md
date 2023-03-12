@@ -80,28 +80,20 @@ subtitle: My academic career and research highlights
 
 # 3 - Teaching Activities
 
-
-
 ## 3.1 - University Courses
 
-### Systems Theory and Advanced Control Systems
-#### University of Bologna, MSc in Automation Engineering, Oct 2018 - Sept 2020
+- __Teaching tutor__ for the course __Systems Theory and Advanced Control Systems__ ([link](https://www.unibo.it/en/teaching/course-unit-catalogue/course-unit/2020/460427)), @ __University of Bologna__, MSc in Automation Engineering, from Oct 2018 to Sept 2020, dealing with:
+    - Dynamic systems representation
+    - Stability of linear systems
+    - Reachability and controllability
+    - Observability and reconstructability
+    - Robust and Adaptive Control
+    - Matlab/Simulink exercise sessions
 
-Teaching tutor for the course ([link](https://www.unibo.it/en/teaching/course-unit-catalogue/course-unit/2020/460427)) dealing with:
-- Dynamic systems representation
-- Stability of linear systems
-- Reachability and controllability
-- Observability and reconstructability
-- Robust and Adaptive Control
-- Matlab/Simulink exercise sessions
-
-### Adaptive and Predictive Control
-#### Delft University of Technology, MSc in Systems and Control, Jan 2018 - Apr 2018
-
-Graduate teaching assistant for the course (10h p/w):
-- lecturer on Model Reference Adaptive Control (3 lectures)
-- preparing and grading assignments (both written and Matlab assignments)
-- 2 Q&A hours per week with students
+- __Graduate teaching assistant__ for the course __Adaptive and Predictive Control__ (10h p/w), @ __Delft University of Technology__, MSc in Systems and Control, from Jan 2018 to Apr 2018, having the following main duties:
+    - lecturer on Model Reference Adaptive Control (3 lectures)
+    - preparing and grading assignments (both written and Matlab assignments)
+    - 2 Q&A hours per week with students
 
 ## 3.2 - Supervision
 
@@ -114,35 +106,21 @@ Graduate teaching assistant for the course (10h p/w):
 Implementation and Testing using ROS"_, November 2019 – October 2020, main supervisor: Prof. Lorenzo Marconi, other co-supervisors: Mr. Roberto Tazzari and Mr. Lorenzo Gentilini.
 - [5] Co-supervisor for the BSc thesis _"Modeling and Linearization-Based Optimal Control Design for UAVs"_, October 2019 – October 2020, main supervisor: Prof. Lorenzo Marconi, other co-supervisor: Mr. Lorenzo Gentilini.
 - [4] Co-supervisor for the BSc thesis _"ROS-based Real-Time Mapping using OctoMap: Implementation and Testing on an Agricultural UGV"_, October 2019 – March 2020, main supervisor: Prof. Lorenzo Marconi, other co-supervisors: Mr. Lorenzo Gentilini and Mr. Dario Mengoli.
-- [3] Co-supervisor for the BSc thesis _"An Extremum Seeking Approach to S&R Operations in Avalanches"_, April 2019 – October 2019, main supervisor: Prof. Lorenzo Marconi.
+- [3] Co-supervisor for the BSc thesis _"An Extremum Seeking Approach to S&R Operations in Avalanches"_, April 2019 – October 2019, main supervisor: Prof. Lorenzo Marconi, other co-supervisors: Dr. Nicola Mimmo.
 - [2] Co-supervisor for the BSc thesis _"Consensus Control for Vehicular Platooning"_, April 2019 – October 2019, main supervisor: Prof. Lorenzo Marconi.
 - [1] Co-supervisor for the BSc thesis _"Synchronization over Homogeneous Multi-Agent Systems"_, January 2019 – March 2019, main supervisor: Prof. Lorenzo Marconi.
 
 # 4 - External Invited Activities
 
-### Activity as a Reviewer
+- Activity as a __Reviewer__:
+    - __Journals__: Elsevier Automatica; IEEE Transactions on Automatic Control (TAC); IEEE Transactions on Control Systems Technology (CST); IEEE Transactions on Control of Network Systems (TCNS); IEEE Control Systems Letters (L-CSS); International Journal of Adaptive Control and Signal Processing; IET Control Theory & Applications; Journal of Guidance, Control, and Dynamics; Optimal Control, Applications and Methods.
+    - __Conferences__: Conference on Decision and Control (CDC); International Conference on Intelligent Robots and Systems (IROS); IFAC Symposium on Nonlinear Control Systems (NOLCOS); IFAC Symposium on Mechatronic Systems; American Control Conference (ACC); IFAC World Congress.
 
-- __Journals__: Elsevier Automatica; IEEE Transactions on Automatic Control (TAC); IEEE Transactions on Control Systems Technology (CST); IEEE Transactions on Control of Network Systems (TCNS); IEEE Control Systems Letters (L-CSS); International Journal of Adaptive Control and Signal Processing; IET Control Theory & Applications; Journal of Guidance, Control, and Dynamics; Optimal Control, Applications and Methods.
-- __Conferences__: Conference on Decision and Control (CDC); International Conference on Intelligent Robots and Systems (IROS); IFAC Symposium on Nonlinear Control Systems (NOLCOS); IFAC Symposium on Mechatronic Systems; American Control Conference (ACC); IFAC World Congress.
+- __Expert Member in Automation and Control Engineering__: I served as commission member for the Italian "state examination for the license to practice engineering", at University of Bologna, between June 2019 and and January 2020.
 
-### Activity as an Examiner
+- __Co-Chair of the Adaptive Control Session @ ECC18__: Invited by the Program Chair, Prof. Thomas Parisini, at the _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018.
 
-#### Expert Member in Automation and Control Engineering
-
-I served as commission member for the Italian "state examination for the license to practice engineering", at University of Bologna, between June 2019 and and January 2020.
-
-### Organization of (or Support for) Scientific Meetings
-
-#### Co-Chair of the Adaptive Control Session @ ECC18
-
-Invited by the Program Chair, Prof. Thomas Parisini, at the _2018 European Control Conference (ECC)_, Limassol, Cyprus, June 12-15, 2018.
-
-
-### Invited Talks
-
-#### Workshop on Robust Control for Linear and Nonlinear Systems
-
-Talk Title: "Extremum Seeking: An Output Regulation Perspective", University of Bologna, September 10, 2019, Organizer: Prof. Lorenzo Marconi.
+- __Invited speaker @ the Workshop on Robust Control for Linear and Nonlinear Systems__. Talk Title: "Extremum Seeking: An Output Regulation Perspective", University of Bologna, September 10, 2019, Organizer: Prof. Lorenzo Marconi.
 
 # 5 - PhD Courses
 
