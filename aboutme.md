@@ -5,7 +5,9 @@ subtitle: My story
 cover-img: /assets/img/Keukenhof.jpg
 ---
 
-Hello there! I'm Ilario, welcome to my personal website! This is the place where I would like to share and write about my free-time activities and projects. I am passionate about _systems and control engineering_, _robotics_, and _software development_ in general. I am eager to learn new stuff, and to contribute to the open-source community in the process.
+Hello there! I'm Ilario, welcome to my personal website!
+
+This is the place where I would like to share and write about my free-time activities and projects. I am passionate about _systems and control engineering_, _robotics_, and _software development_ in general. I am eager to learn new stuff, and to contribute to the open-source community in the process.
 
 Let me shortly introduce myself. If you are curious and want to have a deeper understanding in my education background, you could visit my [Scientific CV](https://ilarioazzollini.github.io/scientific-cv/) page.
 
@@ -18,5 +20,3 @@ After that, I moved to the [Delft Center for Systems and Control (DCSC)](https:/
 Then, I came back to Bologna for my PhD studies in Control Systems Engineering (2018-2021), that is part of the [IBES](https://phd.unibo.it/ibes/en/phd-programme) programme. I officially received the degree in June 2022.
 
 I got married in September 2021, while in November 2021 I started working as a _R&D Software Engineer_ at [SACMI](https://www.sacmi.it/en-us/).
-
-Hi! My name is Ilario Antonio Azzollini and I am currently working as a _R&D Software Engineer_ at the [SACMI Innovation Lab](https://www.sacmi.it/en-us/Corporate/Innovation/Sacmi-Innovation-Lab). In particular, I work in the automation and simulation software team. In line with my background studies, I mainly work on the development and testing of novel control algorithms. 
