@@ -34,7 +34,7 @@ subtitle: My academic career and research highlights
 
 ## 1.2 - MSc in Systems and Control
 #### _TU Delft (The Netherlands), Sep 2016 -- Oct 2018_
-#### _Grade: Cum Laude (GPA: 8.8/10)_
+#### _Grade: With Honors (Cum Laude, GPA: 8.8/10)_
 
 - __Thesis__: "Adaptive Synchronization over Uncertain Multi-Agent Systems: A distributed homogenization-based approach" ([thesis link](https://repository.tudelft.nl/islandora/object/uuid%3Aa93dbba3-4a78-4c6e-bdb3-8cb954911a70), [presentation link](https://www.dropbox.com/s/vpqqovb7zngvpjy/MSc_Final_Presentation.pdf?dl=0))
 - __Main topics__: Control Theory, Optimization, Filtering and Identification, Digital Control, Robust and Multivariable Control, Nonlinear Control, Adaptive and Predictive Control, Networked and Distributed Control.
