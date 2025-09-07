@@ -5,18 +5,12 @@ subtitle: My story
 cover-img: /assets/img/Keukenhof.jpg
 ---
 
-Hello there! I'm Ilario, welcome to my personal website!
+I’m a Mobile Robotics Researcher and Software Engineer with a PhD in Control Systems Engineering. At my core, I'm passionate about solving complex problems, especially when the solution requires diving deep into technical/mathematical concepts and pushing beyond existing approaches.
 
-This is the place where I would like to share and write about my free-time activities and projects. I am passionate about _systems and control engineering_, _robotics_, and _software development_ in general. I am eager to learn new stuff, and to contribute to the open-source community in the process.
+My current work at [E80 Group](https://www.e80group.com/en/) centers on Simultaneous Localization and Mapping (SLAM). I contribute both to research projects and to the development and maintenance of core localization libraries that enable robots to operate autonomously 24/7. My experience spans the full robotics lifecycle: design docs, software development, lab testing, on-site prototype deployment, and production-ready systems.
 
-Let me shortly introduce myself. If you are curious and want to have a deeper understanding in my education background, you could visit my [Scientific CV](https://ilarioazzollini.github.io/scientific-cv/) page.
+Equally important to me is the craft of software engineering. I’m passionate about writing clean, reliable code, designing robust software architectures, and building systems that last. Testing, documentation, and continuous integration aren’t just boxes to tick. I strongly believe they are practices that ensure impact at scale. My main coding languages are C++ and Python, but I like experimenting and learning new ones (like Rust atm). I believe in the importance of open-source software for advancing research, in particular I am a supporter of the Robot Operating System (ROS) 2.
 
-I was born in Puglia (Italy) in 1992, but I've almost always lived in a small town near Bologna (since 2001). I enjoy learning new stuff, travelling, playing tennis, playing videogames, and going out with friends and family.
+While I enjoy being an individual contributor, I also thrive as a technical lead. In that capacity, I define technical direction, break down complex problems into achievable milestones, set success metrics, and ensure the team is aligned on priorities. Mentoring is central to my leadership style: through code reviews, system design discussions, and one-on-one guidance, I aim to help others grow technically while also considering their long-term development and interests.
 
-I hold a BSc in [Automation Engineering](https://corsi.unibo.it/1cycle/AutomationEngineering) from University of Bologna (2012-2016), during which I also spent a whole year in Shanghai, at Tongji University, as part of the [AlmaTong](https://corsi.unibo.it/2cycle/AutomationEngineering/opportunities-multiple-degree-programme) project.
-
-After that, I moved to the [Delft Center for Systems and Control (DCSC)](https://www.tudelft.nl/3me/over/afdelingen/delft-center-for-systems-and-control) for my MSc in [Systems and Control](https://www.tudelft.nl/onderwijs/opleidingen/masters/systems-control/msc-systems-control) (2016-2018).
-
-Then, I came back to Bologna for my PhD studies in Control Systems Engineering (2018-2021), that is part of the [IBES](https://phd.unibo.it/ibes/en/phd-programme) programme. I officially received the degree in June 2022.
-
-I got married in September 2021, while in November 2021 I started working as a _R&D Software Engineer_ at [SACMI](https://www.sacmi.it/en-us/).
+Ultimately, my work is about delivering impact through software—building systems that matter, supporting teams to succeed, and continuously learning along the way.
