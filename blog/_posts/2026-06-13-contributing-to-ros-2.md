@@ -4,8 +4,8 @@ title: Contributing to the ROS 2 project
 subtitle: How-to guide
 # gh-repo: ilarioazzollini/autonomous-unicycle
 # gh-badge: [star, fork, follow]
-cover-img: /blog/img/path.jpg
-thumbnail-img: /blog/img/thumb.png
+cover-img: /blog/img/molveno.jpg
+thumbnail-img: /blog/img/rolling_transparent.png
 share-img: /blog/img/path.jpg
 tags: [ros, programming, open source]
 comments: false
