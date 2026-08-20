@@ -505,4 +505,99 @@ For now the takeaway is simple: **loading is a solved problem in several forms; 
 
 ### 3.2 Tracing a YAML load from rclcpp down into rcl
 
-TBD...
+Now that we know *what* already works, let us understand *how*. Every load demo above, whether through the CLI, a parameters client, or an in-process reload, ultimately went through a single `rclcpp` function: `rclcpp::parameter_map_from_yaml_file`. It is the one `rclcpp` API relevant to this issue, so it is the natural place to start pulling the thread. Following it will take us out of `rclcpp` entirely and down into `rcl`, where the real YAML work happens.
+
+#### 3.2.1 The `rclcpp` entry point
+
+Let us open [`parameter_map.cpp`](https://github.com/ilarioazzollini/rclcpp/blob/ilo/rclcpp-issue-2981/rclcpp/src/rclcpp/parameter_map.cpp) and look at the function itself. It is surprisingly short:
+
+```cpp
+rclcpp::ParameterMap
+rclcpp::parameter_map_from_yaml_file(const std::string & yaml_filename, const char * node_fqn)
+{
+  rcutils_allocator_t allocator = rcutils_get_default_allocator();
+  rcl_params_t * rcl_parameters = rcl_yaml_node_struct_init(allocator);
+  RCPPUTILS_SCOPE_EXIT(rcl_yaml_node_struct_fini(rcl_parameters); );
+  const char * path = yaml_filename.c_str();
+  if (!rcl_parse_yaml_file(path, rcl_parameters)) {
+    rclcpp::exceptions::throw_from_rcl_error(RCL_RET_ERROR);
+  }
+
+  return rclcpp::parameter_map_from(rcl_parameters, node_fqn);
+}
+```
+
+There is barely any C++ here. The function does three things:
+
+1. it initializes an empty C data structure, `rcl_params_t`, with `rcl_yaml_node_struct_init` (and schedules its cleanup with a scope guard);
+2. it hands the file path and that struct to `rcl_parse_yaml_file`, which does all the actual parsing;
+3. it converts the now-populated C struct into the friendly C++ `rclcpp::ParameterMap` we saw in the demos, via `parameter_map_from`.
+
+The interesting realization is what is *not* here. There is no YAML parsing in `rclcpp` at all: no `#include <yaml.h>`, no tokenizing, no type inference. `rclcpp` only *orchestrates*. All three of the functions doing real work, i.e. `rcl_yaml_node_struct_init`, `rcl_parse_yaml_file`, and `rcl_yaml_node_struct_fini`, come from a header we had to include from another package:
+
+```cpp
+#include "rcl_yaml_param_parser/parser.h"
+```
+
+So to understand loading, we have to leave `rclcpp` and follow that include down a layer.
+
+#### 3.2.2 Down into `rcl`: the `rcl_yaml_param_parser` leaf
+
+That header belongs to [`rcl_yaml_param_parser`](https://github.com/ilarioazzollini/rcl/tree/ilo/rclcpp-issue-2981/rcl_yaml_param_parser), a package living in the `rcl` repository. This is worth pausing on, because it is where the multi-repo nature of this issue comes from. The dependency chain looks like this:
+
+```
+rclcpp::parameter_map_from_yaml_file
+   │  (rclcpp)
+   ▼
+rcl_yaml_param_parser  ──►  libyaml_vendor  ──►  libyaml
+   │  (rcl repo)                                 (the C YAML library)
+```
+
+`rcl_yaml_param_parser` is a small, self-contained **leaf utility**: it does *not* depend on `rcl` proper, on the middleware, or on any ROS communication. It depends only on `rcutils` and on `libyaml` (pulled in through `libyaml_vendor`, a thin ROS packaging of the upstream C library). It is, in fact, the package that owns the whole project's YAML dependency: `rclcpp` itself has no `libyaml` dependency whatsoever.
+
+{: .box-note}
+**Note:** This clean separation is not an accident, and it matters a lot for us later. Because YAML lives in one low-level leaf package that everyone else calls into, the same parsing behavior is shared by every client library and by `rcl`'s own `--params-file` handling. When we get to *adding* a serializer, this is exactly why it will belong down here in `rcl_yaml_param_parser`, next to the parser, rather than up in `rclcpp`.
+
+Its public API, declared in [`parser.h`](https://github.com/ilarioazzollini/rcl/blob/ilo/rclcpp-issue-2981/rcl_yaml_param_parser/include/rcl_yaml_param_parser/parser.h), is a handful of plain C functions operating on that `rcl_params_t` struct: lifecycle helpers (`rcl_yaml_node_struct_init` / `_copy` / `_fini`), the parsers (`rcl_parse_yaml_file` and `rcl_parse_yaml_value`), an accessor (`rcl_yaml_node_struct_get`), and a `rcl_yaml_node_struct_print` that dumps the struct to stdout for debugging. Notice the shape of it: everything moves in *one direction*, i.e. from YAML text into the struct. We will come back to that.
+
+#### 3.2.3 The data model
+
+Since this package is a leaf whose whole job is to hand you a data structure you then walk, it deliberately breaks one of the repository's conventions: instead of hiding its types behind an opaque pointer (the PIMPL pattern the rest of `rcl` uses), `rcl_params_t` and its friends are **fully public and transparent**. Every field is spelled out in [`types.h`](https://github.com/ilarioazzollini/rcl/blob/ilo/rclcpp-issue-2981/rcl_yaml_param_parser/include/rcl_yaml_param_parser/types.h), and reading it is the fastest way to understand the package:
+
+```c
+typedef struct rcl_params_s
+{
+  char ** node_names;             // one entry per node in the file
+  rcl_node_params_t * params;     // its parameters, parallel to node_names
+  size_t num_nodes;
+  size_t capacity_nodes;
+  rcutils_allocator_t allocator;  // stored, so every later step uses the same one
+} rcl_params_t;
+```
+
+This is just the C mirror of the `rclcpp::ParameterMap` (node name to parameters) we already met in `load_demo`. Each node's parameters are a parallel-array map of names to `rcl_variant_t` values, and a `rcl_variant_t` is a tagged union: exactly one of its `bool_value`, `integer_value`, `double_value`, `string_value`, or the array variants is non-null, which is how the parser records a parameter's inferred type.
+
+Filling this struct is the job of `rcl_parse_yaml_file`. Under the hood it simply drives `libyaml`'s event stream and translates it into the struct:
+
+```
+rcl_parse_yaml_file
+  └─ libyaml emits events (stream / document / mapping / sequence / scalar)
+       the parser walks them:
+         ├─ map keys      → build the dotted parameter name
+         ├─ scalar value  → infer its type → store it in an rcl_variant_t
+         └─ sequence item → append to the matching typed array
+```
+
+This event loop, and the type inference in particular, is the subtle part, and it is precisely what makes YAML round-tripping tricky. It is the same machinery that decides an unquoted `no` is a boolean rather than the string `"no"`, the exact ambiguity our `sprayer_params.yaml` was built to expose.
+
+#### 3.2.4 The missing return path
+
+Having traced the whole path, one thing stands out. There is a complete, well-worn road *into* the struct:
+
+```
+YAML file  ──►  rcl_parse_yaml_file  ──►  rcl_params_t  ──►  rclcpp::ParameterMap  ──►  node parameters
+```
+
+but there is no road *out* of it. Nothing in upstream `rcl_yaml_param_parser` turns a populated `rcl_params_t` back into YAML text: the closest thing, `rcl_yaml_node_struct_print`, only writes to stdout for debugging and hands you nothing you can save. And because `rclcpp` deliberately owns no YAML machinery of its own, it has nothing to fall back on either. That is the capability gap in one sentence: **the parser is a one-way street.** Everything the `param_holder_node_save` demo wants to do, i.e. serialize a node's live parameters to a correct YAML string, has to be built on top of a struct that currently only knows how to be *filled*, never *emitted*.
+
+That naturally frames the work ahead, and matches what the maintainers had already converged on in the issue thread: the missing serializer belongs in `rcl_yaml_param_parser`, right beside the parser and on top of the same `libyaml` it already depends on, with a thin `rclcpp` free function on top to gather a node's parameters and call down into it. Designing exactly those two pieces is what the next section is about.
