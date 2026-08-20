@@ -20,6 +20,12 @@ Rather than handing you a list of instructions or links to ROS 2 documentation, 
 {: .box-note}
 **Note:** The main goal of this guide is to convince you that getting started really isn't that hard, and that the ROS 2 community is genuinely helpful and responsive. All you need to do is show up and, when in doubt, ask. Good places to do that include the [Open Robotics Discourse](https://discourse.openrobotics.org/), the [Robotics Stack Exchange](https://robotics.stackexchange.com/), and the [Open Robotics Zulip Server](https://openrobotics.zulipchat.com/). All other developer resources can be found at [https://docs.ros.org/](https://docs.ros.org/).
 
+## Table of contents
+{: .no_toc}
+
+* placeholder (this line is replaced by the generated table of contents)
+{:toc}
+
 ## 1. Find something interesting to work on
 
 First of all, we need to find something interesting to work on. I'm comfortable writing C++ and have used [rclcpp](https://github.com/ros2/rclcpp), that is *the ROS Client Library for C++*, for quite a while. Let's head to [its open issues](https://github.com/ros2/rclcpp/issues) and see what's there.
