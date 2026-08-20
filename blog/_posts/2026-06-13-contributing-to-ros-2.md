@@ -342,7 +342,7 @@ Set parameter pass_count successful
 
 #### 3.1.3 The `switch_config_demo` demo
 
-`ros2 param load` is convenient, but it's just a CLI wrapper around a plain `rclcpp` API. The [switch_config_demo](https://github.com/ilarioazzollini/ros-dev/blob/ilo/rclcpp-issue-2981/ros2_ws/src/issue_2981_demo/README.md#switch_config_demo-still-loading-but-from-c-code) demo (source code [here](https://github.com/ilarioazzollini/ros-dev/blob/ilo/rclcpp-issue-2981/ros2_ws/src/issue_2981_demo/src/switch_config_demo.cpp)) shows that same runtime load done purely from C++, with no shell involved. The API is `rclcpp::SyncParametersClient::load_parameters(yaml_filename)`, whose own doc comment says it *"behaves like command-line tool `ros2 param load` would."*
+`ros2 param load` is convenient, but it is a Python command-line tool: the `ros2 param` verb lives in `ros2cli` and is built on `rclpy` (this is exactly why the bug we just saw is an `rclpy` one). The same runtime-load capability is *also* available directly from C++, and that is what the [switch_config_demo](https://github.com/ilarioazzollini/ros-dev/blob/ilo/rclcpp-issue-2981/ros2_ws/src/issue_2981_demo/README.md#switch_config_demo-still-loading-but-from-c-code) demo (source code [here](https://github.com/ilarioazzollini/ros-dev/blob/ilo/rclcpp-issue-2981/ros2_ws/src/issue_2981_demo/src/switch_config_demo.cpp)) shows: the same load done purely from C++, with no shell involved, through `rclcpp::SyncParametersClient::load_parameters(yaml_filename)`, whose own doc comment says it *"behaves like command-line tool `ros2 param load` would."* The two are **independent** implementations of the same idea, i.e. neither wraps the other; both are just clients that push parameters onto a running node through its parameter services over the ROS graph.
 
 ```cpp
 auto owner_node = std::make_shared<rclcpp::Node>("switch_config_demo");
@@ -357,15 +357,25 @@ const std::vector<rcl_interfaces::msg::SetParametersResult> results =
 With `param_holder_node` running in one terminal (as before), we call the demo from another, pointing it at the target node and a YAML file:
 
 ```bash
-ros2 run issue_2981_demo switch_config_demo /sprayer $P/sprayer_params_gentle.yaml
+ros2 run issue_2981_demo switch_config_demo /sprayer $P/sprayer_params.yaml
 ```
 
 ```bash
-loading .../sprayer_params_gentle.yaml into /sprayer -- in-process C++ (rclcpp::SyncParametersClient::load_parameters), no ros2 CLI involved
+loading .../sprayer_params.yaml into /sprayer -- in-process C++ (rclcpp::SyncParametersClient::load_parameters), no ros2 CLI involved
 6 parameter(s) set, 0 failure(s).
 ```
 
-Under the hood this is the same two pieces we've already seen: parse the YAML into a `ParameterMap` (like `load_demo`), then set those parameters on the target node over the ROS graph. The point is simply that the *loading* capability is a first-class, callable API, not a CLI-only trick.
+Notice the `0 failure(s)`, and note that this is the *very same* `sprayer_params.yaml`, with the same `spray_pattern: "no"`, that made `ros2 param load` choke a moment ago. Here it goes through cleanly. Checking the node confirms it:
+
+```bash
+ros2 param get /sprayer spray_pattern
+```
+
+```bash
+String value is: no
+```
+
+Same file, same node, same parameter services, opposite outcome: where the `rclpy` CLI misread `no` as a boolean and left the value untouched, the `rclcpp` client sets it correctly to the string `no`. The reason is exactly the one from the previous section, i.e. this path parses the file through `rcl_yaml_param_parser` (the same path `load_demo` uses) instead of re-inferring the type in Python. Under the hood the demo is the same two pieces we've already seen: parse the YAML into a `ParameterMap` (like `load_demo`), then set those parameters on the target node over the ROS graph. The point is simply that the *loading* capability is a first-class, callable API, not a CLI-only trick, and here, a more correct one than the CLI.
 
 #### 3.1.4 The `self_reload_demo` demo
 
