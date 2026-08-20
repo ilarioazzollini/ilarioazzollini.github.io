@@ -423,6 +423,86 @@ Nothing here is new API: it's the same load path `load_demo` already exercises, 
 
 Between these three demos, one thing becomes clear: **loading** parameters at runtime is already a solved problem, available in several flavors, from the CLI down to a fully in-process, service-less call. What's conspicuously missing is the mirror image, i.e. **saving** a node's live parameters back to a YAML file, correctly, from inside its own process. That's the gap issue 2981 asks us to close, and the subject of the fifth and final demo.
 
+#### 3.1.5 The `param_holder_node_save` demo
+
+The fifth and final demo is the mirror image of everything we have seen so far, and the only one that does *not* run yet. The [param_holder_node_save](https://github.com/ilarioazzollini/ros-dev/blob/ilo/rclcpp-issue-2981/ros2_ws/src/issue_2981_demo/README.md#param_holder_node_save-save-a-nodes-parameters-to-a-yaml-file) demo (source code [here](https://github.com/ilarioazzollini/ros-dev/blob/ilo/rclcpp-issue-2981/ros2_ws/src/issue_2981_demo/src/param_holder_node_save.cpp)) brings up the same `/sprayer` node, then, instead of just exiting on `Ctrl-C`, tries to serialize its own live parameters to YAML and write them to a file, entirely from inside its own process.
+
+The catch is right there in the code:
+
+```cpp
+// On shutdown, serialize this node's own parameters to a YAML string...
+const std::string yaml = rclcpp::serialize_parameters(
+  node->get_node_parameters_interface(),
+  node->get_node_base_interface());
+
+// ...print it, and write it wherever we like.
+std::cout << yaml;
+std::ofstream(save_path) << yaml;
+```
+
+`rclcpp::serialize_parameters()` is a function that **does not exist yet**. It is precisely the API issue 2981 asks us to add. So unlike the first four demos, this one does not compile against today's `rclcpp`: it is written against the future. We are looking at it now, in the "before" picture, because it makes the capability gap concrete, i.e. it is the exact code a user *would* want to write, and can't.
+
+One might reasonably ask: why can't the user just hand-roll it today? After all, `Node` already offers `get_parameters()`, and each `rclcpp::Parameter` has a `value_to_string()`. Couldn't we loop over them and concatenate a YAML document ourselves? This is exactly the trap. Remember our `spray_pattern`, deliberately set to the string `"no"`, and how it already misbehaved back in the `param_holder_node` demo, where a load tried to set it as a boolean. A naive, hand-built serializer walks straight into the same problem: it would emit it as a bare
+
+```yaml
+spray_pattern: no
+```
+
+and an unquoted `no` is read back as the **boolean `false`**, silently corrupting the value on the next load. Producing correct YAML means quoting exactly the values that need it, i.e. reproducing all of `libyaml`'s emitter rules, which is not something anyone should be doing by hand. That is the whole reason the serializer will belong down in `rcl_yaml_param_parser`, on top of the same `libyaml` the parser already uses, something the next section will make much clearer once we have seen how loading works from the inside.
+
+So, what do we *expect* this demo to produce once the feature exists? Running the node, then pressing `Ctrl-C`, should serialize its parameters and hand back a proper YAML document, with `spray_pattern` correctly quoted:
+
+```yaml
+/sprayer:
+  ros__parameters:
+    active_zones:
+    - 'zone_a'
+    - 'zone_b'
+    - 'zone_c'
+    enabled: true
+    max_speed_mps: 1.8
+    nozzle_pressure_bar: 2.5
+    pass_count: 3
+    spray_pattern: 'no'
+```
+
+{: .box-note}
+**Note:** The real output also lists the parameters every node auto-declares (`use_sim_time`, `qos_overrides.*`, `start_type_description_service`) plus the demo's own `save_path` control parameter. `serialize_parameters()` dumps *all* declared parameters, exactly as `ros2 param dump` does. I have trimmed them here to keep the focus on `spray_pattern`.
+
+And the proof that it round-trips: feeding that saved file back through `load_demo` (our very first demo) should show `spray_pattern` returning as the string it started as, not a boolean:
+
+```bash
+ros2 run issue_2981_demo load_demo /tmp/sprayer_saved.yaml
+```
+
+```bash
+  ...
+  spray_pattern = no  (string)
+  ...
+```
+
+That is the target. Everything from here on, the design discussion, the `rcl` serializer, and the thin `rclcpp` wrapper, exists to make this one demo go from "does not compile" to "does exactly that." But before writing a line of it, let us step back and map the whole landscape of save/load capabilities, so the shape of the gap is unmistakable.
+
+#### 3.1.6 Stepping back: the save/load landscape
+
+We have now seen five demos. Before we start building, it is worth drawing the whole map, because it makes the shape of the missing piece obvious. Parameters move along **two independent axes**:
+
+- **in-process vs over the graph** -- a node acting on *itself* (no ROS graph, no parameter services) versus a *client* acting on some *other* node through its parameter services;
+- **load vs save** -- pulling parameters *in* from a YAML file versus pushing them *out* to one.
+
+That is a two-by-two of capabilities. Here is where each of our demos lands, and which cells are still empty:
+
+| | Load (file &rarr; params) | Save (params &rarr; file) |
+| --- | --- | --- |
+| **In-process** (a node, itself) | works &mdash; `self_reload_demo` (as an un-named composition) | **the gap #2981 fills** &mdash; `param_holder_node_save` / `rclcpp::serialize_parameters()` |
+| **Over the graph** (a remote node) | works &mdash; `switch_config_demo` (`SyncParametersClient::load_parameters`) and the `ros2 param load` CLI | **missing** &mdash; no `rclcpp` call; only the `ros2 param dump` CLI |
+
+Three of the four cells are already filled, and our first four demos walked through them. The in-process load cell (`self_reload_demo`) and the over-the-graph load cell (`switch_config_demo`, plus the `ros2 param load` CLI seen in `param_holder_node`) cover the whole **load** row. Saving is the sparse column: the *only* save capability that exists today is the external `ros2 param dump` CLI (the over-the-graph save cell), and there is **no** `rclcpp`/`rcl` function for saving anywhere.
+
+The one cell this contribution fills is **in-process save** -- a node serializing its own parameters, correctly, from inside its own process -- which is exactly what `param_holder_node_save` is written against. But notice the empty **over-the-graph save** cell too: even once we add `serialize_parameters()`, there will still be no C++ way for a *client* to dump a *remote* node's parameters to a file (the mirror of `load_parameters`, and the `rclcpp` equivalent of `ros2 param dump`). We will not build that here, but it is worth keeping in view -- the [demo package's README](https://github.com/ilarioazzollini/ros-dev/blob/ilo/rclcpp-issue-2981/ros2_ws/src/issue_2981_demo/README.md) sketches these follow-ups, and this whole map is what motivates them.
+
+For now the takeaway is simple: **loading is a solved problem in several forms; saving is the gap, and in-process save is the cell we are here to fill.** With the landscape clear, the rest of this post is about filling that cell properly -- which means first understanding the machinery underneath.
+
 ### 3.2 Tracing a YAML load from rclcpp down into rcl
 
 TBD...
